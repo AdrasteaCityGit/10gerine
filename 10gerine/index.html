@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10GERINE</title>
+    <meta name="description" content="10GERINE is the home of the IETF HTTP Working Group, dedicated to maintaining and developing the Hypertext Transfer Protocol. Learn about HTTP specifications, participate in ongoing work, and contribute to the development of the web's core protocol.">
+    <meta name="keywords" content="10GERINE, IETF, HTTP Working Group, HTTP protocol, web development">
+    <meta name="author" content="10gerine">
+    <link rel="canonical" href="https://10gerine.com/">
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "10GERINE Group",
+          "url": "https://10gerine.com/",
+          "logo": "https://10gerine.com/logo.png"
+      }
+    </script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #00397F;
+            padding: 1px 0;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            font-size: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 5px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            padding: 5px 10px; 
+            border-radius: 5px; 
+        }
+
+        nav ul li a:hover {
+            background-color: #004AAD; 
+            color: #fff; 
+        }
+
+        main {
+            padding-top: 5px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1px 1px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .container1 {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1px 1px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        section {
+            margin-bottom: 5px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #555;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 10px;
+            color: #777;
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #004AAD;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(74, 74, 255);
+            text-decoration: underline;
+        }   
+
+        #about {
+            padding-top: 100px;
+        }
+
+        /* Form styles */
+        .subscribe-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #004AAD;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #00397F;
+        }
+        /* Center alignment */
+        #subscribe {
+            text-align: center;
+            margin-left: 400px;
+        }
+
+        subscribe-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left; /* Reset text alignment for form elements */
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 768px) {
+            header {
+                font-size: 16px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+            .container, .container1 {
+                width: 90%;
+            }
+            img {
+                max-width: 100%;
+            }
+            section {
+                max-width: none;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            header {
+                font-size: 14px;
+            }
+            nav ul li a {
+                font-size: 14px;
+                padding: 5px 8px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+        header {
+            font-size: 18px;
+        }
+        nav ul li a {
+            font-size: 16px;
+        }
+            .container, .container1 {
+            width: 90%;
+        }
+        img {
+            max-width: 100%;
+        }
+        section {
+            max-width: none;
+        }
+    }
+
+        @media only screen and (max-width: 992px) {
+        header {
+            font-size: 16px;
+        }
+        nav ul li a {
+            font-size: 14px;
+            padding: 5px 8px;
+        }
+        h2 {
+            font-size: 22px;
+        }
+    }
+
+        @media only screen and (max-width: 768px) {
+        header {
+            font-size: 14px;
+        } 
+        nav ul li a {
+            font-size: 14px;
+            padding: 5px 8px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+        @media only screen and (max-width: 576px) {
+        header {
+            font-size: 12px;
+        }
+        nav ul li a {
+            font-size: 12px;
+            padding: 5px 6px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+    }   
+
+        @media only screen and (max-width: 360px) {
+        header {
+            font-size: 10px;
+        }
+        nav ul li a {
+            font-size: 10px;
+            padding: 5px 4px;
+        }
+        h2 {
+            font-size: 16px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about" aria-label="About Us">ℹ️ ABOUT</a></li>
+                    <li><a href="#blog" aria-label="Blog">📝 Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container1">
+            <img src="logo.png" alt="10GERINE Logo" style="max-width: 50%;" loading="lazy">
+            <section id="about">
+                <h2>📰 About Us</h2>
+                <p>"Welcome to 10gerine, your go-to newsletter for bite-sized professional development insights! Get ready to boost your skills, advance your career, and achieve your goals with our weekly dose of actionable tips and strategies. Subscribe now and take the first step towards unlocking your full potential!"</p>
+            </section>
+            <section id="subscribe">
+                <h2>🗞Subscribe to Our Newsletter🗞</h2>
+                <form action="sub.php" method="POST">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
